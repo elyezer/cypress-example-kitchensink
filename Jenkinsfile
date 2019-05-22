@@ -104,6 +104,7 @@ pipeline {
     // shutdown the server running in the background
     always {
       echo 'Stopping local server'
+      sh 'which pkill'
       sh 'pkill -f http-server'
     }
   }
